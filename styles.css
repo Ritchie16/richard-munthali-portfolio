@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(#b4fab4, #72c272);
+}
+
+/*it wraps the images div and about me*/
+header .myInfo {
+  display: flex;
+  align-items: center;
+  margin: 30px 20px 20px 20px;
+  box-shadow: 0 0 5px #555;
+  background-color: rgb(68, 202, 68);
+  padding: 50px;
+  border-radius: 6px;
+}
+
+/*if the screen size is below 600px the container myInfo should behave as below*/
+@media (max-width: 600px) {
+  header .myInfo {
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.greeting {
+  margin: 20px 20px 0 0;
+  font-size: 4vw;
+  text-align: right;
+}
+
+/*container for cover and front profile image*/
+.profile-images {
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 20px;
+}
+
+/*defines the look cover pic*/
+.profile-images .bg-pic {
+  width: 90%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/*changes how images are displayed*/
+@media (max-width: 450px) {
+  .profile-images .bg-pic {
+    width: 100%;
+    min-width: 150px;
+  }
+
+  /*overrides the definitions of profile-pic under small screens*/
+  .profile-images .profile-pic {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/*defines the look for profile image*/
+.profile-images .profile-pic {
+  display: block;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #47d847;
+}
+
+/*describes how the  profile image should look like when hovered*/
+.profile-images .profile-pic:hover {
+  cursor: pointer;
+
+  box-shadow: 0 0 6px #111111;
+}
+
+/*defines my name, and education class name*/
+.aboutMe {
+  margin-top: 60px;
+  text-align: center;
+}
